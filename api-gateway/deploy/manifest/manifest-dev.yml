@@ -1,0 +1,9 @@
+# Configuration for Cloud Foundry deployment
+---
+applications:
+- name: 3apadmin-api-gateway
+  memory: 768M
+  instances: 1
+  routes:
+    - route: 3apadmin-api-gateway.scapp.io
+

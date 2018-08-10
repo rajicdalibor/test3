@@ -1,0 +1,40 @@
+zuul:
+  host:
+     max-total-connections: 1000
+     max-per-route-connections: 100
+     socket-timeout-millis: 60000
+  retryable: true
+  routes:
+    auth-center:
+      path: /api/users/**
+      serviceId: user-service
+      sensitiveHeaders: Cookie,Set-Cookie
+      stripPrefix: false
+    harvest:
+      path: /api/time/**
+      sensitiveHeaders: 
+      url: http://3apadmin-harvest-service.scapp.io
+      stripPrefix: false
+
+user-service-url: http://3apadmin-user-service.scapp.io/
+
+application:
+  frontendUrl: https://3apadmin-fe-dev.scapp.io
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    nonSecurePortEnabled: true
+    hostname: ${vcap.application.uris[0]}  
+  client:
+    serviceUrl:
+      defaultZone: https://3apadmin-eureka-server.scapp.io/eureka/
+    region: default
+    registryFetchIntervalSeconds: 5
+    availabilityZones:
+      default: ${APPLICATION_DOMAIN:${DOMAIN:defaultZone}}
+    healthcheck:
+      enabled: false
+    fetchRegistry: true

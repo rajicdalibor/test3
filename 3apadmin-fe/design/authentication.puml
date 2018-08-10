@@ -1,0 +1,33 @@
+@startuml
+title Authentication Flow
+
+actor user
+user -> frontend: GET /time
+frontend -> backend: GET /api/time/users
+frontend <- backend: 403
+user <- frontend: show login link
+
+user -> backend: GET /oauth2/authorization/google
+user <- backend: 301 to google Auth
+user -> google: GET google auth
+note right
+authentication
+end note
+...
+user <- google: 301 to /login/oauth2/code/google?code=xxxx&state=yyy
+user -> backend: GET /login/oauth2/code/google?code=xxxx&state=yyy
+note over backend
+Backend throws
+HarvestOAuth2TokenAcquiredException
+end note
+' without a proxy_cookie_domain, this cookie will be set to the domain of the backend
+user <- backend: 301 to frontend/profile [Set-Cookie authed]
+user -> frontend: GET /profile
+
+frontend -> backend: GET /api/profile
+frontend <- backend: **403** [WRONG]
+
+
+
+
+@enduml

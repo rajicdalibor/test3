@@ -1,0 +1,12 @@
+# Configuration for Cloud Foundry deployment
+---
+applications:
+- name: 3apadmin-fe-dev
+# nginx does not need much memory
+  memory: 64M
+  instances: 1
+  # put path to application
+  path: ../../build/
+  buildpack: staticfile_buildpack
+  routes:
+    - route: 3apadmin-fe-dev.scapp.io

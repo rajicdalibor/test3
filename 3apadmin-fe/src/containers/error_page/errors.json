@@ -1,0 +1,12 @@
+{
+  "404": {
+    "id": 404,
+    "title": "errors.404.title",
+    "description": "errors.404.description"
+  },
+  "505": {
+    "id": 505,
+    "title": "errors.505.title",
+    "description": "errors.505.description"
+  }
+}

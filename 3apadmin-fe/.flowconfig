@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/jsonlint
+.*/node_modules/konfig
+
+[include]
+
+[libs]
+decls/flowTypeImports.js
+decls/flowTypeDecls.js
+
+[lints]
+
+[options]
+
+[strict]

@@ -1,0 +1,32 @@
+application:
+  selfUrl: http://localhost:8080
+  frontendUrl: http://localhost:3000
+harvest:
+  baseUrl: https://localhost:8282/
+  headers:
+  # TODO put me in CI as env variable, should not be committed
+    accountId: 690203
+    authorization: 1506753.pt.2Q_O1jc_mDMZKnlM9-R37Ej1LQIF90ZLFNJoP1SvUtTZRUtypcq3YkkhFZdwjxWqPsE0HrDa2G8sakbeJghemA
+
+  oauth2:
+    clientID: dummy-client-id
+    clientSecret: dummy-client-secret
+    accessTokenUri: https://localhost:8282/o/oauth2/token
+    userAuthorizationUri: https://localhost:8282/o/oauth2/v2/harvestauth
+    redirectUri: http://localhost:8080
+spring:
+  application:
+    name: harvest-service
+  datasource:
+    url: jdbc:h2:mem:3apadmin
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: null
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+server:
+  port: 8082

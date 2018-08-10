@@ -1,0 +1,40 @@
+application:
+  selfUrl: 3apadmin-harvest-service.scapp.io/
+  frontendUrl: 3apadmin-fe-dev.scapp.io/
+
+harvest:
+  baseUrl: https://api.harvestapp.com/v2/
+  headers:
+    accountId: 690203
+  oauth2:
+    clientID: DBcyBXdsbENk83MNY8v0ZNZ9
+    clientSecret: 0lxMRnGK8uwBAc-g8YnEJFCDWvnUurXebe8NpBPPCOEBmgJC5t1bstUGr3EPha6b-jzvrYso_L8oB2PfOXB10w
+    accessTokenUri: https://id.getharvest.com/api/v2/oauth2/token
+    userAuthorizationUri: https://id.getharvest.com/oauth2/authorize
+    redirectUri: http://localhost:8080
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    ch.aaap.harvestclient: DEBUG
+    ch.aaap.admin: DEBUG
+spring:
+  application:
+    name: harvest-service
+  datasource:
+    url: jdbc:h2:mem:3apadmin
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: null
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+server:
+  port: 8082
+  servlet:
+    session:
+      cookie:
+        name: HARVEST_SESSIONID

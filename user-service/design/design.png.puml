@@ -1,0 +1,35 @@
+@startuml
+hide empty methods
+hide empty fields
+'class ExceptionController <<@ControllerAdvice>>
+'class OAUth2AuthenticationSuccessHandler
+
+package time {
+    package time.model {
+    UserHours o-- LoggedTimeYearMonth
+    }
+interface TimeService
+class TimeController <<@RestController>>
+
+TimeService ..> harvest.HarvestUser
+TimeService <|-- harvest.HarvestService
+TimeController --> TimeService
+TimeService ..> UserHours
+
+}
+
+
+package harvest {
+class HarvestUser
+HarvestService --> HarvestApiClient
+HarvestService ..> HarvestUser
+}
+
+package model {
+AAAPService ..> AAAPUser
+}
+
+class APIController <<@RestController>>
+APIController --> harvest.HarvestApiClient
+APIController --> AAAPService
+@enduml

@@ -1,0 +1,18 @@
+server.port: 8001
+
+spring:
+  application.name: config-server
+  cloud.config:
+    server.git:
+      uri: https://github.com/rajicdalibor/configProperties.git
+      searchPaths: config
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registryFetchIntervalSeconds: 1
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    healthcheck:
+      enabled: false

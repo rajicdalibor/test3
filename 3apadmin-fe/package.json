@@ -1,0 +1,110 @@
+{
+  "name": "3apadmin-fe",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "babel-plugin-syntax-class-properties": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "cypress": "^2.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "fetch-mock": "^6.3.0",
+    "flow-bin": "^0.72.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jest-css-modules": "^1.1.0",
+    "jest-junit": "^3.7.0",
+    "lint-staged": "^7.0.2",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.11.1",
+    "react-test-renderer": "^16.3.1",
+    "redux-mock-store": "^1.5.1",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.1.0",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.1.0",
+    "@material-ui/icons": "1.0.0-beta.42",
+    "fetch-intercept": "^2.2.3",
+    "google-map-react": "^1.0.3",
+    "include-media": "^1.4.9",
+    "lodash": "^4.17.10",
+    "material-ui": "^1.0.0-beta.47",
+    "moment": "^2.19.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.1.0",
+    "react-intl": "^2.4.0",
+    "react-loader-component": "^1.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "react-scripts": "1.1.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.9.1",
+    "redux-saga": "^1.0.0-beta.1",
+    "reselect": "^3.0.1",
+    "yarn": "^1.7.0"
+  },
+  "scripts": {
+    "precommit": "./scripts/pre-commit.sh",
+    "cypress:version": "cypress version",
+    "cypress:verify": "cypress verify",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:record": "cypress run --record",
+    "cypress:run:chrome": "cypress run --browser chrome",
+    "cypress:run:headed": "cypress run --headed",
+    "testing:local": "concurrently --kill-others \"yarn start\" \"npm start --prefix ./../fake-oauth2-server/\" \"yarn cypress:open\"",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm-run-all build-css build-js",
+    "test": "jest",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "build-js": "react-scripts build",
+    "eject": "react-scripts eject",
+    "flow": "flow"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,scss}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "resolutions": {
+    "jest": "^22.4.3"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "flow"
+    ],
+    "plugins": [
+      "syntax-class-properties",
+      "transform-class-properties"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "test-results/jest/result.xml",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  }
+}

@@ -1,0 +1,37 @@
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: TRACE
+    ch.aaap.admin: TRACE
+    # to debug HTTP requests
+    # ch.aaap.harvestclient.core.Harvest.http: TRACE
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: dummy-client-id
+            client-secret: dummy-client-secret
+            client-name: 3APAdmin
+            scope: profile #scope: profile openid email
+            redirectUriTemplate: http://localhost:8080/login/oauth2/code/google
+        provider: 
+          google: 
+            tokenUri: https://localhost:8282/o/oauth2/token
+            authorizationUri: https://localhost:8282/o/oauth2/v2/auth
+            userInfoUri: https://localhost:8282/oauth2/v3/userinfo
+  application:
+    name: api-gateway
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+    url: jdbc:h2:file:~/test 
+  jpa:
+    properties:
+      hibernate: 
+        ddl-auto: create-drop
+        dialect: org.hibernate.dialect.H2Dialect
+        

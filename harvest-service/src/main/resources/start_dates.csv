@@ -1,0 +1,36 @@
+FirstName,LastName,Email,PayrollNo,ContinuousStartDate,StartDate,EndDate,Status,Team,VirtualTeam,LeaveProfile;;;;
+Veljko,Tasic,veljko@3ap.ch,,2016-06-01,2016-06-01,,active,Axa;Srb,Srb;Employees,Serbia;Leave;Profile
+Dani,Maffiew,dani@3ap.ch,,,2015-01-01,,active,Axa;CH,CH;Employees,Winterthur;;
+Stevan,Ljiljak,stevan@3ap.ch,,2017-02-22,2017-02-22,,active,Stockscan;Srb,Srb;Employees,Serbia;Leave;Profile
+Milica,Kosutic,milica@3ap.ch,,,2017-02-01,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Olivera,Mitrovic,olivera@3ap.ch,,,2017-11-01,,active,Axa;Srb,Srb;Employees,Serbia;Leave;Profile
+Christian,Spiewok,christian@3ap.ch,,2017-04-18,2017-04-18,,active,Allianz;CH,CH;Employees,Zürich;80%;
+Marco,Nembrini,marco@3ap.ch,,,2018-01-15,,active,CH;Admin,,Zürich;;;
+Urs,Wiss,urs@3ap.ch,,2017-08-01,2017-08-01,,active,Adcubum;Swica,CH;Employees,Zürich;80%;
+Andjela,Milosevic,andjela@3ap.ch,,,2017-11-01,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Filip,Tomasevic,filip.tomasevic@3ap.ch,,,2017-10-01,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Jelena,Sretenovic,jelena@3ap.ch,,2017-03-20,2017-03-20,,active,Allianz;Srb,Srb;Employees,Serbia;Leave;Profile
+Aleksandar,Arsenovic,aleksandar.arsenovic@3ap.ch,,,2018-03-01,,active,Axa;Srb,,Serbia;Leave;Profile;
+Nevena,Jovanovic,nevena@3ap.ch,,2017-02-22,2017-02-22,,active,Stockscan;Srb,Srb;Employees,Serbia;Leave;Profile
+Kuba,Grzybowski,kuba@3ap.ch,,2016-07-01,2016-07-01,,active,Swisscard,CH;Employees,Horgen;;;
+Daniel,Harzheim,harzheim@3ap.ch,,2016-09-01,2016-09-01,,active,Axa;CH,CH;Employees,Winterthur;;
+Isidora,Djurdjevic,isidora@3ap.ch,,2017-07-01,2017-07-01,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Thomas,Ogi,thomas@3ap.ch,,,2018-03-01,,active,CH;Admin,,Zürich;;;
+Fabio,Marchesan,fabio@3ap.ch,,2017-06-01,2017-06-01,,active,CH;Admin,CH;Employees,Zürich;40%;
+Zorana,Vranes,zorana@3ap.ch,,,2017-09-14,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Uros,Todoric,uros@3ap.ch,,,2018-01-22,,active,Serbia;Admin,,Serbia;Leave;Profile;
+Cyril,Gabathuler,cyril@3ap.ch,,,2014-12-01,,active,Swisscard,CH;Employees,Horgen;;;
+Igor,Gazivoda,igor@3ap.ch,,2016-01-15,2016-01-15,,active,Axa;Srb,Srb;Employees,Serbia;Leave;Profile
+Robert,Blust,rob@3ap.ch,,,2015-02-01,,active,Axa;CH,CH;Employees,Winterthur;;
+Vladan,Djordjevic,vladan@3ap.ch,,,2018-03-19,,active,Serbia;Admin,,Serbia;Leave;Profile;
+Ivan,Putincanin,ivan@3ap.ch,,2017-06-01,2017-06-01,,active,Allianz;CH,CH;Employees,Zürich;;
+Marko,Ristic,marko@3ap.ch,,,2017-10-15,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Aleksandar,Milosevic,aleksandar@3ap.ch,,2016-03-01,2016-03-01,,active,CH;Admin,CH;Employees,Zürich;;
+Jonas,Heyman,jonas@3ap.ch,,2017-02-13,2017-02-13,,active,Swisscard,CH;Employees,Horgen;;;
+Nemanja,Susic,nemanja@3ap.ch,,,2017-09-18,,active,Serbia;Admin,Srb;Employees,Serbia;Leave;Profile
+Pavle,Bajić,pavle@3ap.ch,,2016-04-06,2016-04-06,,active,Axa;Srb,Srb;Employees,Serbia;Leave;Profile
+Bruno,Krieg,bruno@3ap.ch,,,2017-12-01,,active,Swisscard,CH;Employees,Horgen;80%;;
+Markus,Halme,markus@3ap.ch,,,2017-11-01,,active,CH;Admin,CH;Employees,Zürich;;
+Jessica,Schlagenhauf,jessica@3ap.ch,,2016-10-01,2016-10-01,,active,Swisscard,CH;Employees,Horgen;80%;;
+Dalibor,Rajic,dalibor@3ap.ch,,,2018-03-19,,active,Serbia Admin,Srb Employees,Serbia Leave Profile
+Elitsa,Mladenova,elitsa@3ap.ch,,,2018-06-01,,active,CH Admin,,Zürich

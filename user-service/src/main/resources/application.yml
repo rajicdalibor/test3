@@ -1,0 +1,22 @@
+spring:
+  security:
+      enabled: false
+  application:
+    name: user-service
+# Temporary disabled until we establish db online
+#  datasource:
+#    url: jdbc:mariadb://localhost:3306/3apadmindb
+#    username: 3apadmin
+#    password: 3apadmin_secret
+#    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+    port: 8081
+eureka:
+  instance:
+    appname: user-service

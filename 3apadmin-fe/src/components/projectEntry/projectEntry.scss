@@ -1,0 +1,108 @@
+@import 'styles/3ap';
+
+.wrapper-card {
+  .card {
+    min-width: 275;
+    background-image: linear-gradient(47deg, #0063a0, #00a39b 48%, #70c16b);
+
+    font-size: 16px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    .card-header {
+      align-items: start;
+      padding: 7pt 7pt 7pt 9pt;
+      margin-top: 3pt;
+
+      .company-image-card {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #b7e7be;
+      }
+
+      .project_name {
+        word-break: break-word;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .category {
+        font-size: 16px;
+        font-weight: normal;
+        color: #ffffff;
+        .categoryValue {
+          color: #1c6072;
+        }
+      }
+    }
+
+    .card-content {
+      margin: 0;
+      padding: 3pt 7pt 7pt 9pt;
+      width: 200px;
+
+      .description {
+        display: inline-block;
+        font-size: 16px;
+        color: #1c6072;
+        padding: 0;
+        margin: 2pt 0 9pt 0;
+      }
+
+      .team-comtainer {
+        display: flex;
+        align-items: center;
+        padding-bottom: 5pt;
+
+        .team-label {
+          font-size: 16px;
+          color: #ffffff;
+          display: inline-block;
+          margin-right: 1em;
+        }
+
+        .team-avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          display: inline-block;
+          margin: 0 0.2em;
+        }
+      }
+
+      .status-container {
+        display: flex;
+        align-items: center;
+        padding-bottom: 5pt;
+
+        .status-label {
+          font-size: 16px;
+          color: #ffffff;
+          background-color: clear;
+          margin-right: 1em;
+        }
+        .status-bar {
+          flex: 2;
+          color: #ffffff;
+          background-color: #1c6072// transparent;
+        }
+        .status-value {
+          flex: 1;
+          margin-left: 10pt;
+          font-size: 16px;
+          color: #eeeeee;
+        }
+      }
+    }
+  } /*   card   */
+
+  .working {
+    visibility: hidden;
+  }
+}

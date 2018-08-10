@@ -1,0 +1,34 @@
+{
+  "login.login-title": "Welcome to the 3ap admin portal",
+  "login.login-message": "Please Sign in",
+  "login.button-title": "Sign in with Google",
+  "login.moto-title": "We strive for the top!",
+
+  "logout.button-title": "Logout",
+
+  "main-menu.doc": "Doc",
+  "main-menu.time": "Time",
+  "main-menu.profile": "Profile",
+  "main-menu.projects": "Projects",
+  "main-menu.about-us": "About us",
+  "main-menu.team": "Team",
+  "main-menu.swisscard_upload": "Swisscard upload",
+
+  "timecard.overtime": "Overtime",
+  "timecard.lastmonth": "Last month",
+  "timecard.hours": "Hours",
+
+  "footer.copyright": "3AP AG All rights reserved",
+
+  "userprofile.email": "Email:",
+  "userprofile.phone": "Phone:",
+  "userprofile.skype": "Skype:",
+  "userprofile.birthday": "Birthday:",
+
+  "errors.404.title": "Oooooooops!",
+  "errors.404.description": "Page Not Found",
+  "errors.505.title": "Oooooooops!",
+  "errors.505.description": "Unknown Error",
+
+  "project.header": "PROJECTS"
+}

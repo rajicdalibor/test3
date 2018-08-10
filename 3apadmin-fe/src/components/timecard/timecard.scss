@@ -1,0 +1,53 @@
+@import 'styles/3ap';
+
+.profile-image-card {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-image-card1 {
+  display: none;
+}
+
+.time-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $color-dark-green;
+  color: white;
+  width: 100%;
+}
+
+.time-card-container1 {
+  background-color: $color-dark-green;
+  color: white;
+  width: 100%;
+}
+
+.user-time {
+  text-align: center;
+  margin: auto;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  color: white;
+  background-color: $color-dark-green;
+  width: 100%;
+  padding: 50px;
+}
+
+.hours {
+  color: $color-default;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text {
+  text-align: left;
+}

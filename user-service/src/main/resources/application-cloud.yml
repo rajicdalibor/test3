@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: user-service
+eureka:
+  instance:
+    nonSecurePort: 80
+    preferIpAddress: false
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    nonSecurePortEnabled: true
+    hostname: ${vcap.application.uris[0]}
+  client:
+    serviceUrl:
+      defaultZone: https://3apadmin-eureka-server.scapp.io/eureka/
+    registryFetchIntervalSeconds: 5
+    availabilityZones:
+      default: ${APPLICATION_DOMAIN:${DOMAIN:defaultZone}}
+    enabled: true
+    healthcheck:
+        enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+    instance-info-replication-interval-seconds: 10

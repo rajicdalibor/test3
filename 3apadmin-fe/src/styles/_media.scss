@@ -1,0 +1,4 @@
+@import "include-media/dist/include-media";
+
+// Extending Include-Media query library
+$breakpoints: map-merge($breakpoints, (iphoneXWidth: 812px)); //extending breakpoints for iphoneX landscape width

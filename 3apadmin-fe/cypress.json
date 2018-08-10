@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "fixturesFolder": "src/e2e_tests/cypress/fixtures",
+  "integrationFolder": "src/e2e_tests/cypress/integration",
+  "pluginsFile": "src/e2e_tests/cypress/plugins",
+  "screenshotsFolder": "src/e2e_tests/cypress/screenshots",
+  "supportFile": "src/e2e_tests/cypress/support",
+  "videosFolder": "src/e2e_tests/cypress/videos",
+  "chromeWebSecurity": false,
+  "projectId": "165gai"
+}

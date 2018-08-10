@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  
+user-service-url: http://3apadmin-user-service.scapp.io/
+
+eureka:
+  client:
+    fetchRegistry: true
+
+zuul:
+  routes:
+    auth-center:
+      path: /api/users/**
+      serviceId: user-service
+      sensitiveHeaders: Cookie,Set-Cookie
+      stripPrefix: false
+    harvest:
+      path: /api/time/**
+      sensitiveHeaders:
+      url: http://localhost:8082/
+      stripPrefix: false
+
+application:
+  selfUrl: http://localhost:8080
+  frontendUrl: http://localhost:3000
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    ch.aaap.harvestclient: DEBUG
+    ch.aaap.admin: DEBUG  
+spring:
+  application:
+    name: api-gateway
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+             client-id: 753826529783-mq707bghh1vdo298fun3u3fsl7m0qma7.apps.googleusercontent.com
+             client-secret: kowIgjZR3riJYiJFu4NNPZhM
+             client-name: 3APAdmin
+             provider: google
+
+# To set thread isolation to SEMAPHORE
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE

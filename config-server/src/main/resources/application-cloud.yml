@@ -1,0 +1,9 @@
+eureka:
+ client:
+   healthcheck:
+     enabled: false
+   serviceUrl:
+     defaultZone: https://3apadmin-eureka-server.scapp.io/eureka/
+ instance:
+    preferIpAddress: false
+    hostname: ${vcap.application.uris[0]}

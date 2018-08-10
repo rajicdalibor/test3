@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8761
+eureka:
+  instance:
+    appname: eureka-server
+    preferIpAddress: true
+    status-page-url-path: /info
+    health-check-url-path: /health

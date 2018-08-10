@@ -1,0 +1,11 @@
+# Configuration for Cloud Foundry deployment
+---
+applications:
+- name: 3apadmin-be-prod
+  memory: 1024M
+  instances: 2
+  # put path to application
+  path: ../../target/3APAdmin-0.0.1-SNAPSHOT.jar
+
+  routes:
+    - route: 3apadmin-be-prod.scapp.io

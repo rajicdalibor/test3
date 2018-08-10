@@ -1,0 +1,75 @@
+@import 'styles/3ap';
+
+// Assets
+$image-assets-path: '../../assets/images';
+
+.header-logo-3ap {
+  background: url(#{$image-assets-path}/3ap_logo.svg) no-repeat left 100%;
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 100px auto 180px;
+  padding: $padding-default;
+  color: $color-white;
+  font-size: $font-size-default;
+}
+
+nav {
+  font-family: $font-raleway;
+  font-size: $font-size-menu;
+  a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  .drop-menu {
+    display: none;
+  }
+  .main-menu {
+    display: block;
+    padding: $padding-default;
+  }
+}
+
+.profile-name {
+  display: inline-block;
+  padding-top: $padding-default;
+}
+
+.profile-icon {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  width: $profile-image-size;
+}
+
+.profile-image {
+  border-radius: 50px;
+  width: $profile-image-size;
+  height: $profile-image-size;
+}
+
+@include media('<tablet') {
+  .header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 100px auto 80px;
+  }
+
+  nav {
+    text-align: center;
+    .main-menu {
+      display: none;
+    }
+    .drop-menu {
+      display: block;
+    }
+  }
+
+  .profile-name {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+@import '3ap';
+
+body {
+  margin: 0;
+  font-family: $font-raleway;
+  color: $color-default;
+  height: 100%;
+  min-height: 100vh;
+  padding: 0;
+  width: 100%;
+}
+
+.main {
+  grid-area: main;
+  padding: 10px $padding-default;
+  color: $color-white;
+}
+
+.wrapper {
+  background: $gradient-linear-green;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 80px 1fr 60px;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}

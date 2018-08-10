@@ -1,0 +1,11 @@
+# Configuration for Cloud Foundry deployment
+---
+applications:
+- name: 3apadmin-fe-prod
+  memory: 64M
+  instances: 2
+  # put path to application
+  path: ../../build/
+  buildpack: staticfile_buildpack
+  routes:
+    - route: 3apadmin-fe-prod.scapp.io

@@ -1,0 +1,25 @@
+@import 'styles/3ap';
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  border-top: solid 1px $color-border-green;
+  display: grid;
+  grid-template-columns: [logo] 120px [credits] auto;
+  overflow:hidden;
+}
+
+.footer-logo-3ap {
+  margin-top: 10px;
+  height: 40px;
+  padding: 0 $padding-default;
+}
+
+.credits {
+  width: 100%;
+  color: $color-white;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 15px;
+  margin-top: 20px;
+}

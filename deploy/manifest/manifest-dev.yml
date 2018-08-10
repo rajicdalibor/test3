@@ -1,0 +1,9 @@
+applications:
+- name: 3apadmin-be-dev
+  memory: 1024M
+  instances: 1
+  path: ../../target/3APAdmin-0.0.1-SNAPSHOT.jar
+  routes:
+  - route: 3apadmin-be-dev.scapp.io
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
